@@ -1,0 +1,29 @@
+<h2>
+  <b>{{ Tittle }}</b>
+</h2>
+
+<div class="container" *ngFor="let single of TopHeadlineData">
+  <div class="single-card">
+    <div>
+      <img
+        src="{{ single.urlToImage }}"
+        alt=""
+        style="width: 200px; height: 140px"
+      />
+    </div>
+    <div class="tittle">
+      <h4>{{ single.title }}</h4>
+    </div>
+    <div class="description">
+      <p>{{ single.content }}</p>
+    </div>
+    <div class="buttons">
+      <button mat-raised-button color="accent">
+        <a href="{{ single.url }}" target="_blank"
+          >Read more <mat-icon>open_in_new</mat-icon></a
+        >
+      </button>
+    </div>
+  </div>
+  <hr />
+</div>

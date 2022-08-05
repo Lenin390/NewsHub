@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'NewsHub';
+  isActive = 'true';
+  MenuNavigation = [
+    'business','entertainment','health','science','sports','technology'
+  ]
+
+  CountryList = [
+    'aearataubebgbrcachcncocuczdeegfrgbgrhkhuidieilinitjpkrltlvmamxmyngnlnonzphplptrorsrusasesgsiskthtrtwuausveza'
+  ]
 }

@@ -1,1 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.active{
+    background-color: black;
+}
+.container{
+    display: inline-flex;
+    padding: 5px 10px;
+}
+.card{
+    width: 240px;
+    height: 320px;
+    margin: 10px 10px;
+}
+.tittle{
+    text-align: center;
+}
+.description{
+    margin: 10px 0px;
+    padding: 5px 10px;
+    font-size: 12px;
+}
+.buttons{
+    display: flex;
+}
+.single-card {
+    max-width: 200px;
+    padding: 10px 10px;
+  }
+.details{
+    display: flex;
+    margin: 10px 0px;
+}
+.type{
+    width: 50%;
+    font-weight: bold;
+}
