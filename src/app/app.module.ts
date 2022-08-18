@@ -24,6 +24,7 @@ import { HealthComponent } from './components/health/health.component';
 import { ScienceComponent } from './components/science/science.component';
 import { SportsComponent } from './components/sports/sports.component';
 import { TechnologyComponent } from './components/technology/technology.component';
+import { SplitPipe } from './split.pipe';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { TechnologyComponent } from './components/technology/technology.componen
     HealthComponent,
     ScienceComponent,
     SportsComponent,
-    TechnologyComponent
+    TechnologyComponent,
+    SplitPipe
   ],
   imports: [
     BrowserModule,
