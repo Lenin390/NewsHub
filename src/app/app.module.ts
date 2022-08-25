@@ -15,6 +15,7 @@ import {MatListModule} from '@angular/material/list';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { TopHeadlinesComponent } from './components/top-headlines/top-headlines.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BusinessComponent } from './components/business/business.component';
@@ -25,6 +26,7 @@ import { ScienceComponent } from './components/science/science.component';
 import { SportsComponent } from './components/sports/sports.component';
 import { TechnologyComponent } from './components/technology/technology.component';
 import { SplitPipe } from './split.pipe';
+import { ReusableHeadlinesComponent } from './components/reusable-headlines/reusable-headlines.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,8 @@ import { SplitPipe } from './split.pipe';
     ScienceComponent,
     SportsComponent,
     TechnologyComponent,
-    SplitPipe
+    SplitPipe,
+    ReusableHeadlinesComponent
   ],
   imports: [
     BrowserModule,
@@ -55,6 +58,7 @@ import { SplitPipe } from './split.pipe';
     MatButtonModule,
     FlexLayoutModule,
     MatCardModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

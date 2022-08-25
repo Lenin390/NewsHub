@@ -10,13 +10,15 @@ export class NewsserviceService {
   newsAPIurl:string = 'https://newsapi.org/v2/';
   API_KEY:string = '321e7f7f624f4a34a199c9651f32815c';
   demoURL = 'https://newsapi.org/v2/top-headlines?country=in&apiKey=321e7f7f624f4a34a199c9651f32815c';
-  BusinessURL = 'https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=321e7f7f624f4a34a199c9651f32815c'
-  entertainmentURL = 'https://newsapi.org/v2/top-headlines?country=in&category=entertainment&apiKey=321e7f7f624f4a34a199c9651f32815c'
-  generalURL = 'https://newsapi.org/v2/top-headlines?country=in&category=general&apiKey=321e7f7f624f4a34a199c9651f32815c'
-  healthURL = 'https://newsapi.org/v2/top-headlines?country=in&category=health&apiKey=321e7f7f624f4a34a199c9651f32815c'
-  scienceURL = 'https://newsapi.org/v2/top-headlines?country=in&category=science&apiKey=321e7f7f624f4a34a199c9651f32815c'
-  sportsURL = 'https://newsapi.org/v2/top-headlines?country=in&category=sports&apiKey=321e7f7f624f4a34a199c9651f32815c'
-  technologyURL = 'https://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey=321e7f7f624f4a34a199c9651f32815c'
+  BusinessURL = 'https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=321e7f7f624f4a34a199c9651f32815c';
+  entertainmentURL = 'https://newsapi.org/v2/top-headlines?country=in&category=entertainment&apiKey=321e7f7f624f4a34a199c9651f32815c';
+  generalURL = 'https://newsapi.org/v2/top-headlines?country=in&category=general&apiKey=321e7f7f624f4a34a199c9651f32815c';
+  healthURL = 'https://newsapi.org/v2/top-headlines?country=in&category=health&apiKey=321e7f7f624f4a34a199c9651f32815c';
+  scienceURL = 'https://newsapi.org/v2/top-headlines?country=in&category=science&apiKey=321e7f7f624f4a34a199c9651f32815c';
+  sportsURL = 'https://newsapi.org/v2/top-headlines?country=in&category=sports&apiKey=321e7f7f624f4a34a199c9651f32815c';
+  technologyURL = 'https://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey=321e7f7f624f4a34a199c9651f32815c';
+
+  selectedMenuUrl = 'https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=321e7f7f624f4a34a199c9651f32815c';
 
 
   constructor(private httpReq:HttpClient) { }
@@ -29,7 +31,12 @@ TopHeading():Observable<any>{
 return this.httpReq.get(this.demoURL);
 }
 
-Business():Observable<any>{
+SelectedMenuHeading(MenuItem:string):Observable<any>{
+  let MenuUrl:string = this.newsAPIurl + '/top-headlines?country=in&category=' + MenuItem + '&apiKey=' + this.API_KEY;
+  return this.httpReq.get(MenuUrl);
+}
+
+business():Observable<any>{
   return this.httpReq.get(this.BusinessURL);
 }
 entertainment():Observable<any>{

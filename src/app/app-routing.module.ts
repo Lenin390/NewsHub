@@ -5,20 +5,21 @@ import { EntertainmentComponent } from './components/entertainment/entertainment
 import { GeneralComponent } from './components/general/general.component';
 import { HealthComponent } from './components/health/health.component';
 import { NavigationMenuComponent } from './components/navigation-menu/navigation-menu.component';
+import { ReusableHeadlinesComponent } from './components/reusable-headlines/reusable-headlines.component';
 import { ScienceComponent } from './components/science/science.component';
 import { SportsComponent } from './components/sports/sports.component';
 import { TechnologyComponent } from './components/technology/technology.component';
 import { TopHeadlinesComponent } from './components/top-headlines/top-headlines.component';
 
 const routes: Routes = [
-  {path:'',component: TopHeadlinesComponent},  //home
-  {path:'business',component: BusinessComponent},
-  {path:'entertainment',component: EntertainmentComponent},
-  {path:'health',component: HealthComponent},
-  {path:'science',component: ScienceComponent},
-  {path:'sports',component: SportsComponent},
-  {path:'technology',component: TechnologyComponent},
-  // {path:'business',component: TopHeadlinesComponent},
+  {path:'',component: ReusableHeadlinesComponent},  //home
+  {path:'home',component: ReusableHeadlinesComponent},
+  {path:'business',component: ReusableHeadlinesComponent},
+  {path:'entertainment',component: ReusableHeadlinesComponent},
+  {path:'health',component: ReusableHeadlinesComponent},
+  {path:'science',component: ReusableHeadlinesComponent},
+  {path:'sports',component: ReusableHeadlinesComponent},
+  {path:'technology',component: ReusableHeadlinesComponent},
   {path:'**',component: NavigationMenuComponent},
 ];
 
