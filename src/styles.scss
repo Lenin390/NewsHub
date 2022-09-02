@@ -8,6 +8,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .container{
     display: inline-flex;
     padding: 5px 10px;
+    box-sizing: border-box;
+    border: 0px solid;
 }
 .card{
     width: 240px;
@@ -16,6 +18,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 .tittle{
     text-align: center;
+    width: 100%;
+    color: rgba(243,244,246);
 }
 .description{
     margin: 10px 0px;
